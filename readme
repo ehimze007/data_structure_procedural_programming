@@ -1,0 +1,16 @@
+problem 1: Finding the sum of distinct elements from a set
+
+- Declare a "sum" variable which is the sum of all the distinct elements.
+- Declare a variable that stores the element value based on the conditions being satisfied.
+- Loop through the first parameter; check each element against the elements of the second parameter.
+  - if the element of the first parameter is present in the second parameter array, then let the arrayValue = 0;
+  - if the previous condition is false, then assign the current value of first parameter to arrayValue
+- repeat same task; looping through the second parameter and nesting the loop of the first parameter
+- return the sum
+
+problem 2: Determine orthogonal vectors
+
+- Declare an array variable to contain vector pairs that are orthogonal
+- Create a loop that tests the orthogonal vector characteristic
+- if test returns true, then push the current value pair into the array variable
+- console.log the array
