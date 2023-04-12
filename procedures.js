@@ -1,39 +1,29 @@
 //Problem 1:
-function elemSum(set1, set2) {
-  //DECLARE VARIABLES
+function elementSum(set1, set2) {
   let sum = 0;
-  let arrayValue;
-  //BEGIN
-  //Create a loop through the parameter array
-  for (let i = 0; i < set1.length; i++) {
-    for (let j = 0; j < set2.length; j++) {
-      //create conditions to determine if set1 elements are in set2
-      if (set1[i] !== set2[j]) {
-        arrayValue = set1[i];
-      } else if (set1[i] == set2[j]) {
-        arrayValue = 0;
-        break;
+
+  function elementSumHelper(setOfConsideration, setOfSearch) {
+    for (i = 0; i < setOfConsideration.length; i++) {
+      let found = false;
+
+      for (j = 0; j < setOfSearch.length; j++) {
+        if (setOfSearch[j] === setOfConsideration[i]) {
+          found = true;
+          break;
+        }
       }
+
+      if (!found) sum += setOfConsideration[i];
     }
-    sum += arrayValue; //add the arrayValue to sum
   }
 
-  for (let j = 0; j < set2.length; j++) {
-    for (let i = 0; i < set1.length; i++) {
-      //create conditions to determine if set2 elements are in set1
-      if (set1[i] !== set2[j]) {
-        arrayValue = set2[j];
-      }
-      if (set1[i] == set2[j]) {
-        arrayValue = 0;
-        break;
-      }
-    }
-    sum += arrayValue; //add the arrayValue to sum
-  }
-  console.log(sum);
+  elementSumHelper(set1, set2);
+  elementSumHelper(set2, set1);
+
+  return sum;
 }
-elemSum([3, 1, 7, 9], [2, 4, 1, 9, 3]);
+
+console.log(elementSum([3, 1, 7, 9], [2, 4, 1, 9, 3]));
 
 // Problem 2:
 

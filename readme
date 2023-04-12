@@ -1,12 +1,9 @@
 problem 1: Finding the sum of distinct elements from a set
 
 - Declare a "sum" variable which is the sum of all the distinct elements.
-- Declare a variable that stores the element value based on the conditions being satisfied.
-- Loop through the first parameter; check each element against the elements of the second parameter.
-  - if the element of the first parameter is present in the second parameter array, then let the arrayValue = 0;
-  - if the previous condition is false, then assign the current value of first parameter to arrayValue
-- repeat same task; looping through the second parameter and nesting the loop of the first parameter
-- return the sum
+- create a function with a loop and conditions to determine if the elements are distinct or exist in both arrays.
+- if the conditions for distinct elements are satisfied, then increment sum variable
+- Upon completion of the loops return the total sum.
 
 problem 2: Determine orthogonal vectors
 
